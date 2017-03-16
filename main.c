@@ -13,13 +13,5 @@ int main(void) {
     return 1;
   }
 
-  pinMode(PinOne, INPUT);
-  pinMode(PinTwo, INPUT);
-  pinMode(PinThree, OUTPUT);
-
-  digitalWrite(PinOne, LOW);
-  digitalWrite(PinTwo, HIGH);
-  digitalRead(PinOne);
-
   return 0;
 }
