@@ -9,7 +9,7 @@
 int main(void) {
 
   if(wiringPiSetupGpio() < 0) {
-    fprintf(stderr, "Unable to setup wiringPi:%s\n",strerror(errno));
+    fprintf(stderr, "Unable to setup wiringPi: %s\n", strerror(errno));
     return 1;
   }
 
