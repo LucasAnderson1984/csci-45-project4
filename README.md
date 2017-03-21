@@ -13,7 +13,7 @@ Matthew Williams
 2. Autonomous mode (you turn it on, it will engage seek and destroy mode automatically)
 3. It must fire a bouncy ball or something equally cool (a miniature harpoon, a ping pong ball, etc.)
 4. Accurate: it should strike the center of mass on the target, or as close as possible to the center
-5. Distance: It should be able to detect and hit targets between 1m and 5m (the effective range of <span>[our ultrasound sensors](https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-25-ultrasonic-ranging-module-sensor-kit-v2-0-for-b-plus.html)</span>). This is a change from what I said in class (I was thinking of a different sensor off the top of my head).
+5. Distance: It should be able to detect and hit targets between 1m and 5m (the effective range of [our ultrasound sensors]). This is a change from what I said in class (I was thinking of a different sensor off the top of my head).
 
 Bonus points will be given for areas where you do significantly better than the expectation. For example, if you make it walk around, or shoot larger objects or strike targets further away.
 
@@ -52,3 +52,4 @@ run code: <br />
 make
 sudo ./project.o
 ```
+[our ultrasound sensors]: https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-25-ultrasonic-ranging-module-sensor-kit-v2-0-for-b-plus.html
