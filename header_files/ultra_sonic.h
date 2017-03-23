@@ -1,5 +1,5 @@
-#ifndef SERVO_SENSOR_H
-#define SERVO_SENSOR_H
+#ifndef ULTRA_SONIC_H
+#define ULTRA_SONIC_H
 
 #include <wiringPi.h>
 #include <stdio.h>

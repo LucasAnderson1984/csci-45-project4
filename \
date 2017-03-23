@@ -7,7 +7,7 @@ ServoSensor::ServoSensor(const int pin):servoPin(pin) {
 ServoSensor::~ServoSensor(void) { }
 
 int ServoSensor::searchLeft(void) {
-  for (int i = 2; i <= 20; i++) {
+  for (int i = 0; i <= 50; i++) {
     softPwmWrite(servoPin, i);
 
     delay(100);
@@ -17,7 +17,7 @@ int ServoSensor::searchLeft(void) {
 }
 
 int ServoSensor::searchRight(void) {
-  for (int i = 20; i >= 4; i--) {
+  for (int i = 25; i >= 0; i--) {
     softPwmWrite(servoPin, i);
 
     delay(100);
@@ -28,6 +28,6 @@ int ServoSensor::searchRight(void) {
 
 int ServoSensor::position(int pos) {
     softPwmWrite(servoPin, pos);
-    delay(500);
+
     return pos;
 }

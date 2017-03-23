@@ -1,6 +1,6 @@
 #include "./../header_files/ultra_sonic.h"
 
-UltraSonic::UltraSonic(const int echo, const int trig):echoPin(echo):trigPin(trig) {
+UltraSonic::UltraSonic(const int echo, const int trig):echoPin(echo), trigPin(trig) {
   pinMode(echo, INPUT);
   pinMode(trig, OUTPUT);
 }
