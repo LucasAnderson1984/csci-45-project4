@@ -1,10 +1,7 @@
-#include <stdio.h>
 #include <errno.h>
+#include <stdio.h>
 #include <wiringPi.h>
-
-#define PinOne 17
-#define PinTwo 27
-#define PinThree 22
+#include "./header_files/relay.h"
 
 int main(void) {
 
