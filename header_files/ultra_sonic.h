@@ -12,6 +12,6 @@ class UltraSonic {
   public:
     UltraSonic(const int, const int);
     ~UltraSonic(void);
-    disMeasure(void);
+    float disMeasure(void);
 };
 #endif
