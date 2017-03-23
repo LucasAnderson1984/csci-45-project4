@@ -9,17 +9,9 @@
 int main(void) {
 
   if(wiringPiSetupGpio() < 0) {
-    fprintf(stderr, "Unable to setup wiringPi:%s\n",strerror(errno));
+    fprintf(stderr, "Unable to setup wiringPi: %s\n", strerror(errno));
     return 1;
   }
-
-  pinMode(PinOne, INPUT);
-  pinMode(PinTwo, INPUT);
-  pinMode(PinThree, OUTPUT);
-
-  digitalWrite(PinOne, LOW);
-  digitalWrite(PinTwo, HIGH);
-  digitalRead(PinOne);
 
   return 0;
 }
