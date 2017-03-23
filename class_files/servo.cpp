@@ -1,4 +1,4 @@
-#include "./../header_files/servo_sensor.h"
+#include "./../header_files/servo.h"
 
 ServoSensor::ServoSensor(const int pin):servoPin(pin) {
   softPwmCreate(pin, 0, 100);
