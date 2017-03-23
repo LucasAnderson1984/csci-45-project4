@@ -7,7 +7,7 @@ UltraSonic::UltraSonic(const int echo, const int trig):echoPin(echo):trigPin(tri
 
 UltraSonic::~UltraSonic() { }
 
-float disMeasure(void) {
+float UltraSonic::disMeasure(void) {
   struct timeval tv1;
   struct timeval tv2;
   long time1, time2;
