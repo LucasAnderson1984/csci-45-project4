@@ -24,11 +24,15 @@ int main(void) {
 //  delay(500);
 //  servo.position(11);
 
-    UltraSonic ultra(23,24);
+    UltraSonic ultra1(23, 24);
+    UltraSonic ultra2(17, 27);
 
     while(1) {
-      cout << ultra.disMeasure() << endl;
-      delay(300);
+      cout << "UltraSonic 1: " << ultra1.disMeasure() << " cm" << endl;
+      delay(750);
+
+      cout << "UltraSonic 2: " << ultra2.disMeasure() << " cm" << endl;
+      delay(750);
     }
   return 0;
 }
