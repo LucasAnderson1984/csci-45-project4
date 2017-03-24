@@ -28,9 +28,15 @@ float UltraSonic::disMeasure(void) {
   time1 = tv1.tv_sec * 1000000 + tv1.tv_usec;
   time2 = tv2.tv_sec * 1000000 + tv2.tv_usec;
   dis = (float)(time2 - time1) / 1000000 * 34000 / 2;
-  dis *= 10;
-  dis = (int)dis;
-  dis = (float)(dis / 10);
 
-  return dis;
+  return round(dis);
+}
+
+float UltraSonic::round(float number, float nearest) {
+  nearest = (int)pow(10, nearest);
+  number *= nearest;
+  number = (int)number;
+  number = (float)(number / nearest);
+
+  return number;
 }

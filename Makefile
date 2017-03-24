@@ -2,7 +2,7 @@ project: main.o relay.o servo.o ultra_sonic.o
 	g++ main.o relay.o servo.o ultra_sonic.o -lwiringPi -o project.o
 
 main.o: main.cpp
-	g++ -c -std=c++98 main.cpp -lwiringPi
+	g++ -c -std=c++11 main.cpp -lwiringPi
 
 relay.o: ./class_files/relay.cpp ./header_files/relay.h
 	g++ -c ./class_files/relay.cpp -lwiringPi
