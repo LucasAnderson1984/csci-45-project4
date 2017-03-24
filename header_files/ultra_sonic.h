@@ -11,6 +11,7 @@ class UltraSonic {
     const int trigPin;
     const int echoPin;
     float round(float, float nearest = 1);
+
   public:
     UltraSonic(const int, const int);
     ~UltraSonic(void);
