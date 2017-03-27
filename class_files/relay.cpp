@@ -7,9 +7,9 @@ Relay::Relay(const int pin):relayPin(pin) {
 Relay::~Relay(void) { }
 
 void Relay::on(void) {
-  digitalWrite(relayPin, HIGH);
+  digitalWrite(relayPin, LOW);
 }
 
 void Relay::off(void) {
-  digitalWrite(relayPin, LOW);
+  digitalWrite(relayPin, HIGH);
 }
