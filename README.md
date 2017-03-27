@@ -14,7 +14,9 @@ Matthew Williams
 3. It must fire a bouncy ball or something equally cool (a miniature harpoon, a ping pong ball, etc.) <br />
 4. Accurate: it should strike the center of mass on the target, or as close as possible to the center <br />
 5. Distance: It should be able to detect and hit targets between 1m and 5m (the effective range of
+
 [our ultrasound sensors](https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-25-ultrasonic-ranging-module-sensor-kit-v2-0-for-b-plus.html)
+
 ). This is a change from what I said in class (I was thinking of a different sensor off the top of my head) <br />
 
 Bonus points will be given for areas where you do significantly better than the expectation. For example, if you make it walk around, or shoot larger objects or strike targets further away.
