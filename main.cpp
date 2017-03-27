@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <wiringPi.h>
+#include "./header_files/random_player.h"
 #include "./header_files/relay.h"
 #include "./header_files/servo.h"
 #include "./header_files/ultra_sonic.h"
@@ -18,7 +19,7 @@ int main(void) {
   }
 
   ServoSensor servo(22, 17, 27, 23, 24);
-  
+
   while(1) {
     cout << servo.searchLeft() << endl;
 
@@ -77,7 +78,7 @@ int main(void) {
     relay4.off();
 
     delay(5000);
-  
+
     cout << "Moving Backward" << endl;
 
     relay1.off();
