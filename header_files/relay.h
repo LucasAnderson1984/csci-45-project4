@@ -8,7 +8,7 @@ using namespace std;
 
 class Relay {
   private:
-    const int relayPin;
+    const int RELAYPIN;
 
   public:
     Relay(const int);

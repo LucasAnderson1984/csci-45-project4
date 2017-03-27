@@ -11,10 +11,15 @@ using namespace std;
 
 class UltraSonic {
   private:
-    const int trigPin;
-    const int echoPin;
-    float round(float, float nearest = 1);
+    float dis;
+    const int ECHOPIN;
+    long time1, time2;
+    const int TRIGPIN;
+    struct timeval tv1;
+    struct timeval tv2;
+    float calculate(void);
     void echo(void);
+    float round(float, float nearest = 1);
 
   public:
     UltraSonic(const int, const int);

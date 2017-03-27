@@ -1,30 +1,13 @@
 #include "./../header_files/ultra_sonic.h"
 
-UltraSonic::UltraSonic(const int echo, const int trig):echoPin(echo), trigPin(trig) {
+UltraSonic::UltraSonic(const int echo, const int trig):ECHOPIN(echo), TRIGPIN(trig) {
   pinMode(echo, INPUT);
   pinMode(trig, OUTPUT);
 }
 
 UltraSonic::~UltraSonic() { }
 
-float UltraSonic::disMeasure(void) {
-  struct timeval tv1;
-  struct timeval tv2;
-  long time1, time2;
-  float dis;
-  int stuck = 0;
-
-  echo();
-
-  while(!(digitalRead(echoPin) == 1))
-    if ((stuck % 2500) == 0)
-      echo();
-
-  gettimeofday(&tv1, NULL);
-
-  while(!(digitalRead(echoPin) == 0));
-  gettimeofday(&tv2, NULL);
-
+float UltraSonic::calculate(void) {
   time1 = tv1.tv_sec * 1000000 + tv1.tv_usec;
   time2 = tv2.tv_sec * 1000000 + tv2.tv_usec;
   dis = (float)(time2 - time1) / 1000000 * 34000 / 2;
@@ -32,19 +15,34 @@ float UltraSonic::disMeasure(void) {
   return round(dis);
 }
 
-float UltraSonic::round(float number, float nearest) {
-  nearest = (int)pow(10, nearest);
-  number *= nearest;
-  number = (int)number;
-  number = (float)(number / nearest);
+float UltraSonic::disMeasure(void) {
+  int stuck = 0;
 
-  return number;
+  echo();
+
+  while(!(digitalRead(ECHOPIN) == 1))
+    if ((stuck % 2500) == 0)
+      echo();
+
+  gettimeofday(&tv1, NULL);
+
+  while(!(digitalRead(ECHOPIN) == 0));
+  gettimeofday(&tv2, NULL);
+
+  return calculate();
 }
 
 void UltraSonic::echo() {
-  digitalWrite(trigPin, LOW);
+  digitalWrite(TRIGPIN, LOW);
   delayMicroseconds(2);
 
-  digitalWrite(trigPin, HIGH);
+  digitalWrite(TRIGPIN, HIGH);
   delayMicroseconds(10);
+}
+
+float UltraSonic::round(float number, float nearest) {
+  nearest = (int)pow(10, nearest);
+  number = ((int)(number * nearest)) / nearest;
+
+  return number;
 }

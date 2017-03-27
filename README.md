@@ -9,11 +9,11 @@ Matthew Williams
 <p>For this project you will make a sentry gun that will locate a target and shoot a projectile at it.</p>
 
 <p>Minimum specs for 100%:</p>
-1. It can rotate up to 180 degrees, detect a stationary target within the firing arc, and shoot it
-2. Autonomous mode (you turn it on, it will engage seek and destroy mode automatically)
-3. It must fire a bouncy ball or something equally cool (a miniature harpoon, a ping pong ball, etc.)
-4. Accurate: it should strike the center of mass on the target, or as close as possible to the center
-5. Distance: It should be able to detect and hit targets between 1m and 5m (the effective range of [our ultrasound sensors][1]). This is a change from what I said in class (I was thinking of a different sensor off the top of my head)
+1. It can rotate up to 180 degrees, detect a stationary target within the firing arc, and shoot it <br />
+2. Autonomous mode (you turn it on, it will engage seek and destroy mode automatically) <br />
+3. It must fire a bouncy ball or something equally cool (a miniature harpoon, a ping pong ball, etc.) <br />
+4. Accurate: it should strike the center of mass on the target, or as close as possible to the center <br />
+5. Distance: It should be able to detect and hit targets between 1m and 5m (the effective range of <span>[our ultrasound sensors][1]</span>). This is a change from what I said in class (I was thinking of a different sensor off the top of my head) <br />
 
 Bonus points will be given for areas where you do significantly better than the expectation. For example, if you make it walk around, or shoot larger objects or strike targets further away.
 
@@ -30,14 +30,23 @@ The core programming for this assignment <strong>must be done in assembly</stron
 [Relay](https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-4-relay-module-sensor-kit-v2-0-for-b-plus.html) <br />
 [Ultrasonic Ranging Module](https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-25-ultrasonic-ranging-module-sensor-kit-v2-0-for-b-plus.html) <br />
 [Servo Motors](#)
-[DC Motors](#)
 
-### sensor one ###
-gpio 17 - pinone
-### sensor two ###
-gpio 27 - pintwo
-### sensor three ###
-gpio 22 - pinthree
+### Relay 1 ###
+gpio 21 - pinone
+### Relay 2 ###
+gpio 20 - pinone
+### Relay 3 ###
+gpio 16 - pinone
+### Relay 4 ###
+gpio 12 - pinone
+### Servo Motor ###
+gpio 22 - pinone
+### UltraSonic 1 ###
+gpio 17 - ECHOPIN
+gpio 27 - TRIGPIN
+### UltraSonic 2 ###
+gpio 23 - ECHOPIN
+gpio 24 - TRIGPIN
 
 ## responsibilities ##
 Construct Launcher - Thomas Andersen <br />

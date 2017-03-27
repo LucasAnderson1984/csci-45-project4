@@ -10,7 +10,9 @@ using namespace std;
 
 class ServoSensor {
   private:
-    const int servoPin;
+    const int SERVOPIN;
+    const int START = 0;
+    const int FINISH = 18;
     UltraSonic* sonic1;
     UltraSonic* sonic2;
 
