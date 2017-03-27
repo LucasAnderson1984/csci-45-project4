@@ -31,8 +31,8 @@ The core programming for this assignment <strong>must be done in assembly</stron
 
 ## Sensors ##
 [Relay](https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-4-relay-module-sensor-kit-v2-0-for-b-plus.html) <br />
-[Ultrasonic Ranging Module](https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-25-ultrasonic-ranging-module-sensor-kit-v2-0-for-b-plus.html) <br />
-[Servo Motors](#)
+[Servo Motors](#) <br />
+[Ultrasonic Ranging Module](https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-25-ultrasonic-ranging-module-sensor-kit-v2-0-for-b-plus.html)
 
 ### Relay 1 ###
 gpio 21 - pinone
@@ -53,13 +53,13 @@ gpio 24 - TRIGPIN
 
 ## Responsibilities ##
 Construct Launcher - Thomas Andersen <br />
-Report - Team <br />
+Report - Thomas Andersen <br />
 Programming - Lucas Anderson <br />
 Pin mapping in memory - Matthew Williams
 
 - - - -
 # Compile and Run Code #
-run code: <br />
+Run code: <br />
 ```
 make
 sudo ./project.o
