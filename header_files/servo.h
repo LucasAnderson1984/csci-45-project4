@@ -1,15 +1,23 @@
 #ifndef SERVO_SENSOR_H
 #define SERVO_SENSOR_H
 
-#include <wiringPi.h>
+#include <iostream>
 #include <softPwm.h>
+#include "ultra_sonic.h"
+#include <wiringPi.h>
+
+using namespace std;
 
 class ServoSensor {
   private:
-    const int servoPin;
+    const int SERVOPIN;
+    const int START = 0;
+    const int FINISH = 18;
+    UltraSonic* sonic1;
+    UltraSonic* sonic2;
 
   public:
-    ServoSensor(const int);
+    ServoSensor(const int, const int, const int, const int, const int);
     ~ServoSensor(void);
     int searchLeft(void);
     int searchRight(void);

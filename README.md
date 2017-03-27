@@ -5,15 +5,18 @@ Lucas Anderson <br />
 Thomas Andersen <br />
 Matthew Williams
 
-## rules ##
+## Rules ##
 <p>For this project you will make a sentry gun that will locate a target and shoot a projectile at it.</p>
 
 <p>Minimum specs for 100%:</p>
-1. It can rotate up to 180 degrees, detect a stationary target within the firing arc, and shoot it
-2. Autonomous mode (you turn it on, it will engage seek and destroy mode automatically)
-3. It must fire a bouncy ball or something equally cool (a miniature harpoon, a ping pong ball, etc.)
-4. Accurate: it should strike the center of mass on the target, or as close as possible to the center
-5. Distance: It should be able to detect and hit targets between 1m and 5m (the effective range of [our ultrasound sensors][1]). This is a change from what I said in class (I was thinking of a different sensor off the top of my head)
+1. It can rotate up to 180 degrees, detect a stationary target within the firing arc, and shoot it <br />
+2. Autonomous mode (you turn it on, it will engage seek and destroy mode automatically) <br />
+3. It must fire a bouncy ball or something equally cool (a miniature harpoon, a ping pong ball, etc.) <br />
+4. Accurate: it should strike the center of mass on the target, or as close as possible to the center <br />
+5. Distance: It should be able to detect and hit targets between 1m and 5m (the effective range of
+
+[our ultrasound sensors](https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-25-ultrasonic-ranging-module-sensor-kit-v2-0-for-b-plus.html)
+). This is a change from what I said in class (I was thinking of a different sensor off the top of my head) <br />
 
 Bonus points will be given for areas where you do significantly better than the expectation. For example, if you make it walk around, or shoot larger objects or strike targets further away.
 
@@ -24,32 +27,40 @@ You have already been assigned into groups of three. If you do not have a group,
 The core programming for this assignment <strong>must be done in assembly</strong>. You're welcome to call C or C++ libraries to interface with the sensors or to handle data structures.
 
 - - - -
-# project proposal #
+# Project Proposal #
 
-## sensors ##
+## Sensors ##
 [Relay](https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-4-relay-module-sensor-kit-v2-0-for-b-plus.html) <br />
-[Ultrasonic Ranging Module](https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-25-ultrasonic-ranging-module-sensor-kit-v2-0-for-b-plus.html) <br />
-[Servo Motors](#)
-[DC Motors](#)
+[Servo Motors](#) <br />
+[Ultrasonic Ranging Module](https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-25-ultrasonic-ranging-module-sensor-kit-v2-0-for-b-plus.html)
 
-### sensor one ###
-gpio 17 - pinone
-### sensor two ###
-gpio 27 - pintwo
-### sensor three ###
-gpio 22 - pinthree
+### Relay 1 ###
+gpio 21 - pinone
+### Relay 2 ###
+gpio 20 - pinone
+### Relay 3 ###
+gpio 16 - pinone
+### Relay 4 ###
+gpio 12 - pinone
+### Servo Motor ###
+gpio 22 - pinone
+### Ultrasonic 1 ###
+gpio 17 - ECHOPIN <br />
+gpio 27 - TRIGPIN
+### Ultrasonic 2 ###
+gpio 23 - ECHOPIN <br />
+gpio 24 - TRIGPIN
 
-## responsibilities ##
+## Responsibilities ##
 Construct Launcher - Thomas Andersen <br />
-Report - Team <br />
+Report - Thomas Andersen <br />
 Programming - Lucas Anderson <br />
 Pin mapping in memory - Matthew Williams
 
 - - - -
-# compile and run code #
-run code: <br />
+# Compile and Run Code #
+Run code: <br />
 ```
 make
 sudo ./project.o
 ```
-[1]: https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-25-ultrasonic-ranging-module-sensor-kit-v2-0-for-b-plus.html
