@@ -1,8 +1,8 @@
 #include "./../header_files/launcher.h"
 
-Launcher::Launcher(ServoSensor servo*, Relay* relays) {
-  self.servo = servo;
-  self.relays = relays;
+Launcher::Launcher(ServoSensor* s, Relay* r) {
+  servo = s;
+  relays = r;
   srand(time(0));
   random_player = new RandomPlayer();
 
@@ -26,32 +26,28 @@ void Launcher::destroy(void) {
 }
 
 void Launcher::launch(void) {
-  relay1.off();
-  relay2.on();
-  relay3.off();
-  relay4.on();
+  relays[0].off();
+  relays[1].on();
+  relays[2].off();
+  relays[3].on();
 }
 
 void Launcher::off(void) {
-  relays[0]->off();
-  relays[1]->off();
-  relays[2]->off();
-  relays[3]->off();
+  relays[0].off();
+  relays[1].off();
+  relays[2].off();
+  relays[3].off();
 }
 
-void Launcher::play(const int mp3) {
-  random_player->play(mp3);
-}
-
-void Launcher::seek(int) {
+void Launcher::seek(void) {
   while(1) {
-    random_player.searching(random());
-    if (servo.searchLeft())
+    random_player->searching(random());
+    if (servo->searchLeft())
       destroy();
 
-    random_player.searching(random());
+    random_player->searching(random());
 
-    if (servo.searchRight())
+    if (servo->searchRight())
       destroy();
   }
 }
@@ -60,8 +56,8 @@ int Launcher::random(void) {
 }
 
 void Launcher::wind(void) {
-  relay1.on();
-  relay2.off();
-  relay3.on();
-  relay4.off();
+  relays[0].on();
+  relays[1].off();
+  relays[2].on();
+  relays[3].off();
 }

@@ -14,7 +14,6 @@ class Launcher {
     void destroy(void);
     void off(void);
     void launch(void);
-    void play(const int);
     int random(void);
     RandomPlayer* random_player;
     Relay* relays;
@@ -24,6 +23,6 @@ class Launcher {
   public:
     Launcher(ServoSensor*, Relay*);
     ~Launcher(void);
-    void seek(int);
+    void seek(void);
 };
 #endif

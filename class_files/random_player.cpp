@@ -4,7 +4,7 @@ RandomPlayer::RandomPlayer(void) { }
 
 RandomPlayer::~RandomPlayer(void) { }
 
-RandomPlayer::firing(const int mp3) {
+void RandomPlayer::firing(const int mp3) {
   switch(mp3) {
     case 1:
       system("omxplayer /home/pi/csci-45-project4/mp3s/firing/1.wav");

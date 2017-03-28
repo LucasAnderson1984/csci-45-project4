@@ -25,8 +25,8 @@ int main(void) {
   ServoSensor* servo = new ServoSensor(22, 17, 27, 23, 24);
   Relay relays[4] = { Relay(21), Relay(20), Relay(16), Relay(12) };
 
-  Launcher launcher(servo, &relays);
-  laucher.seek();
+  Launcher launcher(servo, relays);
+  launcher.seek();
 
   return 0;
 }
