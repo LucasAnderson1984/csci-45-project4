@@ -1,8 +1,8 @@
 project: main.o launcher.o random_player.o relay.o servo.o ultra_sonic.o
 	g++ main.o launcher.o random_player.o relay.o servo.o ultra_sonic.o -lwiringPi -o project.o
 
-main.o: main.cpp
-	g++ -c -std=c++11 main.cpp -lwiringPi
+main.o: main.cpp ./sample_code/sample_on_off.s
+	g++ -c -std=c++11 main.cpp ./sample_code/sample_on_off.s -lwiringPi
 
 launcher.o: ./class_files/launcher.cpp ./header_files/launcher.h
 	g++ -c -std=c++11 ./class_files/launcher.cpp -lwiringPi

@@ -12,6 +12,11 @@
 
 using namespace std;
 
+extern "C" {
+  void asm_on(Relay*);
+  void asm_off(Relay*);
+}
+
 int main(void) {
 
   if(wiringPiSetupGpio() < 0) {
@@ -25,7 +30,8 @@ int main(void) {
   Relay relays[4] = { Relay(21), Relay(20), Relay(16), Relay(12) };
 
   Launcher launcher(servo, relays);
-  launcher.seek();
+  // launcher.seek();
+  asm_on(relay);
 
   return 0;
 }
