@@ -19,8 +19,8 @@ servo.o: ./class_files/servo.cpp ./header_files/servo.h
 ultra_sonic.o: ./class_files/ultra_sonic.cpp ./header_files/ultra_sonic.h
 	g++ -c -std=c++11 ./class_files/ultra_sonic.cpp -lwiringPi
 
-asm_on_off.o: ./sample/asm_on_off.s
-	as -c ./sample/asm_on_off.s -o asm_on_off.o
+asm_on_off.o: ./sample_code/asm_on_off.s
+	as -c ./sample_code/asm_on_off.s -o asm_on_off.o
 
 clean:
 	rm *.o
