@@ -31,7 +31,7 @@ int main(void) {
 
   Launcher launcher(servo, relays);
   // launcher.seek();
-  asm_on(relay);
+  asm_on(relays);
 
   return 0;
 }
