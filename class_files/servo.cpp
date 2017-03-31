@@ -18,6 +18,9 @@ int ServoSensor::searchLeft(void) {
     cout << "Sonic 1: " << s1 << endl;
     cout << "Sonic 2: " << s2 << endl;
 
+    if(sonic1->disMeasure() > 250 || sonic2->disMeasure() > 250)
+	continue;
+   
     if (abs(s1 - s2) <= 2)
       return HIGH;
 

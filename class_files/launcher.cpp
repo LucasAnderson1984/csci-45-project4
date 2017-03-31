@@ -14,13 +14,13 @@ Launcher::~Launcher(void) { }
 void Launcher::destroy(void) {
   random_player->found(random());
   launch();
-  delay(500);
+  delay(180);
 
   off();
   random_player->firing(random());
 
   wind();
-  delay(210 / 2);
+  delay(400);
 
   off();
 }
@@ -41,12 +41,13 @@ void Launcher::off(void) {
 
 void Launcher::seek(void) {
   while(1) {
+cout << "Search Left" << endl;
     random_player->searching(random());
     if (servo->searchLeft())
       destroy();
 
     random_player->searching(random());
-
+cout << "Search Right" << endl;
     if (servo->searchRight())
       destroy();
   }

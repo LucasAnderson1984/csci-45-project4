@@ -2,6 +2,7 @@
 #define LAUNCHER_H
 
 #include <ctime>
+#include <iostream>
 #include <stdlib.h>
 #include "random_player.h"
 #include "relay.h"

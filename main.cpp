@@ -18,7 +18,6 @@ int main(void) {
     fprintf(stderr, "Unable to setup wiringPi: %s\n", strerror(errno));
     return 1;
   }
-
   RandomPlayer random_player;
   random_player.start();
 
