@@ -7,6 +7,9 @@ class RandomPlayer {
   public:
     RandomPlayer(void);
     ~RandomPlayer(void);
-    void play(int);
+    void firing(const int);
+    void found(const int);
+    void searching(const int);
+    void start(void);
 };
 #endif

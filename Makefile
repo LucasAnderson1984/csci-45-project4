@@ -1,8 +1,11 @@
-project: main.o random_player.o relay.o servo.o ultra_sonic.o
-	g++ main.o random_player.o relay.o servo.o ultra_sonic.o -lwiringPi -o project.o
+project: main.o launcher.o random_player.o relay.o servo.o ultra_sonic.o
+	g++ main.o launcher.o random_player.o relay.o servo.o ultra_sonic.o -lwiringPi -o project.o
 
 main.o: main.cpp
 	g++ -c -std=c++11 main.cpp -lwiringPi
+
+launcher.o: ./class_files/launcher.cpp ./header_files/launcher.h
+	g++ -c -std=c++11 ./class_files/launcher.cpp -lwiringPi
 
 random_player.o: ./class_files/random_player.cpp ./header_files/random_player.h
 	g++ -c -std=c++11 ./class_files/random_player.cpp
